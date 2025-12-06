@@ -1,0 +1,23 @@
+import pandas as pd
+import os
+
+branches = ['1 Durbar Mall', 'Airport 1', 'Airport Arrival', 'Anamnagar', 'Apex', 'B&B', 'Babarmahal',
+            'Baluwatar', 'Baneshwor', 'Bansbari', 'Basantapur', 'Battisputali', 'Bhaisepati', 'Bhaktapur',
+            'Bikers Cafe', 'Bluebird Mall', 'Boudha', 'Boudha(Phulbari)', 'British School', 'Buddhanilkantha',
+            'Chhaya Center', 'Chhaya Center 2', 'City Center', 'Civil Mall', 'Dhulikhel', 'Gyanmandala',
+            'Hattiban', 'Himalayan Java X SJ Moto', 'Imadol', 'Itahari', 'Jawalakhel', 'Jhamsikhel', 'Kalanki',
+            'Kalikasthan', 'Khumaltar', 'Kimdol', 'Kuleshwor', 'Kumaripati', 'Kupondole', 'Kurintar',
+            'Labim Mall (Inside)', 'Labim Mall (Outside)', 'Lazimpat', 'Lazimpat Kiosk', 'Maharajgunj', 'Marcopolo',
+            'Metro Park', 'Nakkhu', 'Nepal Art Council', 'Pokhara Center Point', 'Pokhara Nadipur', 'Pokhara Northface',
+            'Pokhara Ratnachowk', 'Purva Dhoka', 'Putalisadak', 'Rising Mall', 'Sanepa International Club',
+            'Satdobato', 'Sinamangal', 'Sky Walk Tower', 'Sunakothi', 'Thamel (Kiosk)', 'Thamel (Main Java)',
+            'Thapathali Kiosk', 'Woodland Durbarmarg']
+
+branches_df = pd.DataFrame(branches, columns=['branch'])
+print(branches_df.head(5))
+
+path = 'C:/Users/acer/Desktop/Datasets/coffee_house'
+filepath = os.path.join(path, 'branches.csv')
+
+os.makedirs(path, exist_ok=True)
+branches_df.to_csv(filepath, index=False)
