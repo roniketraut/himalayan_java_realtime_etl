@@ -1,0 +1,60 @@
+item_id,item_name,category,price,created_date
+HOT-1,Americano,hot_beverages,185,3/12/2025 7:44
+HOT-2,Espresso,hot_beverages,135,3/12/2025 7:44
+HOT-3,Flat White,hot_beverages,350,3/12/2025 7:44
+HOT-4,Cafe Latte,hot_beverages,330,3/12/2025 7:44
+HOT-5,Cappucino,hot_beverages,310,3/12/2025 7:44
+HOT-6,Doppio,hot_beverages,200,3/12/2025 7:44
+HOT-7,Macchiato,hot_beverages,240,3/12/2025 7:44
+HOT-8,Caramel Macchiato,hot_beverages,310,3/12/2025 7:44
+HOT-9,Espresso Con Panna,hot_beverages,215,3/12/2025 7:44
+HOT-10,Espresso Affogato,hot_beverages,250,3/12/2025 7:44
+HOT-11,Americano Royale,hot_beverages,375,3/12/2025 7:44
+HOT-12,Piccolo,hot_beverages,260,3/12/2025 7:44
+HOT-13,Australian Style Cappucino,hot_beverages,350,3/12/2025 7:44
+ICE-14,Iced Latte,iced_coffees,495,3/12/2025 7:44
+ICE-15,Iced Cappucino,iced_coffees,495,3/12/2025 7:44
+ICE-16,Iced Americano,iced_coffees,395,3/12/2025 7:44
+ICE-17,Iced Caramel Macchiato,iced_coffees,580,3/12/2025 7:44
+ICE-18,Blended/Iced Mocha,iced_coffees,550,3/12/2025 7:44
+ICE-19,Blended Double Vanilla Mocha,iced_coffees,590,3/12/2025 7:44
+ICE-20,Blended Caramel Machiato,iced_coffees,610,3/12/2025 7:44
+ALT-21,Nepali Tea,alternative drinks,210,3/12/2025 7:44
+ALT-22,Hot Lemon With Honey,alternative drinks,260,3/12/2025 7:44
+ALT-23,Hot Chocolate,alternative drinks,340,3/12/2025 7:44
+ALT-24,Flavored Exotic Tea,alternative drinks,300,3/12/2025 7:44
+ALT-25,Iced Peach Tea Or Lemon Tea,alternative drinks,450,3/12/2025 7:44
+ALT-26,Fresh Seasonal Juice,alternative drinks,415,3/12/2025 7:44
+ALT-27,Seasonal Smoothies,alternative drinks,465,3/12/2025 7:44
+ALT-28,Oreo Cookie Shake,alternative drinks,585,3/12/2025 7:44
+ALT-29,Ice Cream Shake,alternative drinks,475,3/12/2025 7:44
+ALT-30,Blended Mint Lemonade,alternative drinks,385,3/12/2025 7:44
+SAN-31,American Club,sandwich,785,3/12/2025 7:44
+SAN-32,Italian Club,sandwich,985,3/12/2025 7:44
+SAN-33,Veg Club,sandwich,645,3/12/2025 7:44
+SAN-34,Classic BLT,sandwich,745,3/12/2025 7:44
+SAN-35,Steak Sandwich,sandwich,955,3/12/2025 7:44
+SAN-36,Salami Sandwich,sandwich,955,3/12/2025 7:44
+SAN-37,Ham & Cheese Sandwich,sandwich,855,3/12/2025 7:44
+SAL-38,Grilled Chicken Salad,salads,845,3/12/2025 7:44
+SAL-39,Organic Salad,salads,650,3/12/2025 7:44
+SAL-40,Quinoa Salad,salads,775,3/12/2025 7:44
+SAL-41,Cesar Salad Veg,salads,550,3/12/2025 7:44
+SAL-42,Cesar Salad Chicken,salads,795,3/12/2025 7:44
+BAG-43,Bagels with Egg and Cheese,bagels,665,3/12/2025 7:44
+BAG-44,"Bagels with Bacon, Egg and Cheese",bagels,745,3/12/2025 7:44
+BAG-45,Bagels with Ham and Cheese,bagels,465,3/12/2025 7:44
+BAG-46,Bagels with Cream Cheese,bagels,425,3/12/2025 7:44
+EGG-47,Two Eggs,eggs,510,3/12/2025 7:44
+EGG-48,Two Eggs with Bacon or Sausage,eggs,610,3/12/2025 7:44
+EGG-49,Two Eggs with Spinach and Cheese,eggs,525,3/12/2025 7:44
+EGG-50,Three Eggs,eggs,555,3/12/2025 7:44
+EGG-51,Three Eggs with Bacon or Sausage,eggs,710,3/12/2025 7:44
+BRE-52,Original Triple Layer Pancake,breakfast,895,3/12/2025 7:44
+BRE-53,French Toast,breakfast,775,3/12/2025 7:44
+BRE-54,Big Breakfast,breakfast,985,3/12/2025 7:44
+BRE-55,Museli,breakfast,755,3/12/2025 7:44
+BRE-56,Crossiant with Bacon Egg & Cheese,breakfast,920,3/12/2025 7:44
+BRE-57,Breakfast Creals,breakfast,665,3/12/2025 7:44
+BRE-58,Waffle,breakfast,775,3/12/2025 7:44
+BRE-59,Poach Benedict,breakfast,775,3/12/2025 7:44

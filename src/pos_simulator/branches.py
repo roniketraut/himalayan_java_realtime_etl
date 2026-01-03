@@ -16,7 +16,7 @@ branches = ['1 Durbar Mall', 'Airport 1', 'Airport Arrival', 'Anamnagar', 'Apex'
 branches_df = pd.DataFrame(branches, columns=['branch'])
 print(branches_df.head(5))
 
-path = 'C:/Users/acer/Desktop/Datasets/coffee_house'
+path = 'C:/Users/acer/vscode_projects/coffehouse_chain_project/data'
 filepath = os.path.join(path, 'branches.csv')
 
 os.makedirs(path, exist_ok=True)

@@ -1,0 +1,16 @@
+FROM apache/spark:3.5.0
+
+# Set working directory
+WORKDIR /opt/spark-apps
+
+# Ensure spark-submit is available
+ENV PATH=/opt/spark/bin:$PATH
+
+CMD ["/opt/spark/bin/spark-submit", \
+     "--master", "local[*]", \
+     "--packages", "io.delta:delta-core_2.12:2.4.0,org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0", \
+     "/opt/spark-apps/ingestion/consumer/spark_consumer.py"]
+
+
+
+

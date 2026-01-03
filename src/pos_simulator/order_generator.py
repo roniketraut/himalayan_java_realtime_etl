@@ -14,8 +14,8 @@ def random_timestamp_generator():
     return random_time
 
 def random_order_generator():
-    menu_file_path = 'C:/Users/acer/Desktop/Datasets/coffee_house/menu.csv'
-    branch_file_path = 'C:/Users/acer/Desktop/Datasets/coffee_house/branches.csv'
+    menu_file_path = 'C:/Users/acer/vscode_projects/coffehouse_chain_project/data/menu.csv'
+    branch_file_path = 'C:/Users/acer/vscode_projects/coffehouse_chain_project/data/branches.csv'
 
     try:
         menu_df = pd.read_csv(menu_file_path)
@@ -35,8 +35,11 @@ def random_order_generator():
 
     for idx, row in order_menu_df.iterrows():
         quantity = random.randint(1,4)
-        order_list.append({"item_id":row["item_id"], "item_name":row["item_name"], 
-                                "price": row["price"], "quantity":quantity, "amount": row["price"]*quantity})
+        order_list.append({"item_id":row["item_id"], 
+                            "item_name":row["item_name"], 
+                            "price": row["price"],
+                            "quantity":quantity, 
+                            "amount": row["price"]*quantity})
         
     branch_list = branch_df["branch"].to_list()
 
@@ -45,7 +48,8 @@ def random_order_generator():
         "timestamp":random_timestamp_generator(),
         "order_details":order_list,
         "branch":random.choice(branch_list),
-        "total_order_amount": sum([item["amount"] for item in order_list])
+        "total_order_amount": sum([item["amount"] for item in order_list]),
+        "mode_of_payment": random.choice(["mobile banking", "debit card", "cash"])
 
     }
     return order

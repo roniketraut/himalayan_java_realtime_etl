@@ -93,7 +93,7 @@ for category, items in menu[0].items():
 df_menu = pd.DataFrame(menu_list)
 print(df_menu.head(5))
 
-path = 'C:/Users/acer/Desktop/Datasets/coffee_house'
+path = 'C:/Users/acer/vscode_projects/coffehouse_chain_project/data'
 filepath = os.path.join(path, 'menu.csv')
 
 # ensuring the path exists
