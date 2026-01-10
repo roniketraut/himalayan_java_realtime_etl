@@ -1,0 +1,325 @@
+{
+  "datasets": [
+    {
+      "name": "f423c94b",
+      "displayName": "hourly sales in major lalitpur city",
+      "queryLines": [
+        "-- hourly sales trends\r\n",
+        "SELECT start AS hour_start, end AS hour_end, branch, hourly_revenue\r\n",
+        "FROM hj_orders.gold.hourly_sales_trends\r\n",
+        "WHERE branch in ('Satdobato', 'Jawalakhel', 'Imadol', 'Sanepa International Club', 'Kumaripati')\r\n",
+        "ORDER BY hour_start ASC;\r\n"
+      ]
+    },
+    {
+      "name": "d1e3e0ae",
+      "displayName": "product_sales",
+      "queryLines": [
+        "SELECT * FROM hj_orders.gold.product_sales"
+      ]
+    },
+    {
+      "name": "8ab68ff2",
+      "displayName": "branch_sales",
+      "queryLines": [
+        "SELECT * FROM hj_orders.gold.branch_sales"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "name": "386b6de4",
+      "displayName": "Himalayan Java Dashboard",
+      "layout": [
+        {
+          "widget": {
+            "name": "total-revenue-by-branch",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "8ab68ff2",
+                  "fields": [
+                    {
+                      "name": "branch",
+                      "expression": "`branch`"
+                    },
+                    {
+                      "name": "sum(total_revenue)",
+                      "expression": "SUM(`total_revenue`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "branch",
+                  "scale": {
+                    "type": "categorical",
+                    "sort": {
+                      "by": "y-reversed"
+                    }
+                  }
+                },
+                "y": {
+                  "fieldName": "sum(total_revenue)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              },
+              "frame": {
+                "title": "Total Revenue by Branch",
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 3,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "total-quantity-vs-total-revenue",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "d1e3e0ae",
+                  "fields": [
+                    {
+                      "name": "item_id",
+                      "expression": "`item_id`"
+                    },
+                    {
+                      "name": "item_name",
+                      "expression": "`item_name`"
+                    },
+                    {
+                      "name": "total_quantity",
+                      "expression": "`total_quantity`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 1,
+              "widgetType": "table",
+              "encodings": {
+                "columns": [
+                  {
+                    "fieldName": "item_id",
+                    "title": "item_id",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "type": "string",
+                    "displayAs": "string",
+                    "visible": true
+                  },
+                  {
+                    "fieldName": "item_name",
+                    "title": "item_name",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "type": "string",
+                    "displayAs": "string",
+                    "visible": true
+                  },
+                  {
+                    "fieldName": "total_quantity",
+                    "title": "total_quantity",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "type": "integer",
+                    "displayAs": "number",
+                    "visible": true
+                  }
+                ]
+              },
+              "invisibleColumns": [
+                {
+                  "numberFormat": "0",
+                  "booleanValues": [
+                    "false",
+                    "true"
+                  ],
+                  "imageUrlTemplate": "{{ @ }}",
+                  "imageTitleTemplate": "{{ @ }}",
+                  "imageWidth": "",
+                  "imageHeight": "",
+                  "linkUrlTemplate": "{{ @ }}",
+                  "linkTextTemplate": "{{ @ }}",
+                  "linkTitleTemplate": "{{ @ }}",
+                  "linkOpenInNewTab": true,
+                  "name": "total_revenue",
+                  "type": "integer",
+                  "displayAs": "number",
+                  "order": 100003,
+                  "title": "total_revenue",
+                  "allowSearch": false,
+                  "alignContent": "right",
+                  "allowHTML": false,
+                  "highlightLinks": false,
+                  "useMonospaceFont": false,
+                  "preserveWhitespace": false
+                },
+                {
+                  "numberFormat": "0",
+                  "booleanValues": [
+                    "false",
+                    "true"
+                  ],
+                  "imageUrlTemplate": "{{ @ }}",
+                  "imageTitleTemplate": "{{ @ }}",
+                  "imageWidth": "",
+                  "imageHeight": "",
+                  "linkUrlTemplate": "{{ @ }}",
+                  "linkTextTemplate": "{{ @ }}",
+                  "linkTitleTemplate": "{{ @ }}",
+                  "linkOpenInNewTab": true,
+                  "name": "total_number_of_orders",
+                  "type": "integer",
+                  "displayAs": "number",
+                  "order": 100004,
+                  "title": "total_number_of_orders",
+                  "allowSearch": false,
+                  "alignContent": "right",
+                  "allowHTML": false,
+                  "highlightLinks": false,
+                  "useMonospaceFont": false,
+                  "preserveWhitespace": false
+                }
+              ],
+              "allowHTMLByDefault": false,
+              "itemsPerPage": 25,
+              "paginationSize": "default",
+              "condensed": true,
+              "withRowNumber": false,
+              "frame": {
+                "title": "Total Quantity of Each Item",
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 3,
+            "y": 0,
+            "width": 3,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "hourly-revenue-by-branch",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "f423c94b",
+                  "fields": [
+                    {
+                      "name": "branch",
+                      "expression": "`branch`"
+                    },
+                    {
+                      "name": "hourly(hour_start)",
+                      "expression": "DATE_TRUNC(\"HOUR\", `hour_start`)"
+                    },
+                    {
+                      "name": "sum(hourly_revenue)",
+                      "expression": "SUM(`hourly_revenue`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "hourly(hour_start)",
+                  "scale": {
+                    "type": "temporal"
+                  }
+                },
+                "y": {
+                  "fieldName": "sum(hourly_revenue)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "branch",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "frame": {
+                "title": "Hourly Revenue by Branch",
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 6,
+            "width": 6,
+            "height": 6
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS"
+    },
+    {
+      "name": "0f6e87c4",
+      "displayName": "Global Filters",
+      "layout": [
+        {
+          "widget": {
+            "name": "10e2a5e5",
+            "spec": {
+              "version": 2,
+              "widgetType": "filter-single-select",
+              "encodings": {},
+              "frame": {
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 2
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_GLOBAL_FILTERS"
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED"
+    },
+    "applyModeEnabled": false
+  }
+}
