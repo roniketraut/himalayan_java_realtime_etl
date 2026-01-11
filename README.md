@@ -57,7 +57,8 @@ Security: Implemented a "Keyless" architecture using an Azure Access Connector (
 Isolation: Physically separated data across raw, processed, and transformed containers using Schema-level Managed Locations.
 Lineage: Leveraged UC to provide automated end-to-end data lineage, traceable from the SQL Dashboard back to the raw Event Hubs stream.
 
-<img width="2112" height="670" alt="Screenshot 2026-01-10 130904" src="https://github.com/user-attachments/assets/b36b29fd-9175-47e6-8398-6a7e736dc112" />
+<img width="1206" height="792" alt="unity catalog lineage" src="https://github.com/user-attachments/assets/4b9cf87b-832b-45b0-9f47-037de178fd69" />
+
 
 ## Deployment (Docker)
 The POS Simulator is containerized to ensure environment parity and portability.
